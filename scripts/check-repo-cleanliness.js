@@ -1,18 +1,48 @@
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
+const { execFileSync } = require("child_process");
 const { finish, listFiles, relative, resolveRoot } = require("./lib/framework-validation");
 
 const root = resolveRoot(process.argv[2] || ".");
 const errors = [];
 const rootName = path.basename(root);
 const files = listFiles(root);
+const isGitRepo = fs.existsSync(path.join(root, ".git"));
+
+function gitOutput(args) {
+  return execFileSync("git", args, { cwd: root, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] });
+}
+
+function isTracked(relativePath) {
+  if (!isGitRepo) return false;
+  return gitOutput(["ls-files", relativePath]).trim().split(/\r?\n/).filter(Boolean).includes(relativePath);
+}
+
+function isIgnored(relativePath) {
+  if (!isGitRepo) return false;
+  try {
+    gitOutput(["check-ignore", relativePath]);
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 for (const file of files) {
   const rel = relative(root, file);
   const base = path.basename(file);
 
-  if (base === "__MACOSX" || base === ".DS_Store") {
+  if (base === ".DS_Store") {
+    if (isTracked(rel)) {
+      errors.push(`tracked generated OS artifact: ${rel}`);
+    } else if (!isIgnored(rel)) {
+      errors.push(`generated OS artifact is not ignored by Git: ${rel}`);
+    }
+    continue;
+  }
+
+  if (base === "__MACOSX") {
     errors.push(`rejected generated OS artifact: ${rel}`);
   }
 
