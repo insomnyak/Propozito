@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Project State",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "project_name",
+    "current_phase",
+    "status",
+    "current_branch",
+    "current_commit",
+    "last_checkpoint",
+    "active_tasks",
+    "blocked_tasks",
+    "completed_tasks",
+    "open_questions",
+    "high_risk_decisions_pending",
+    "active_locks",
+    "file_ownership",
+    "branch_map",
+    "worktree_map",
+    "required_gates",
+    "latest_gate_results",
+    "test_commands",
+    "latest_test_status",
+    "persona_matrix_path",
+    "decision_log_path",
+    "assumption_log_path",
+    "risk_register_path",
+    "rollback_points",
+    "next_recommended_action"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "project_id": { "type": "string" },
+    "project_name": { "type": "string" },
+    "current_phase": { "type": "string" },
+    "status": { "type": "string", "enum": ["idle", "planning", "active", "blocked", "recovery", "release_ready", "archived"] },
+    "current_branch": { "type": "string" },
+    "current_commit": { "type": "string" },
+    "last_checkpoint": { "type": "string" },
+    "active_tasks": { "type": "array", "items": { "type": "string" } },
+    "blocked_tasks": { "type": "array", "items": { "type": "string" } },
+    "completed_tasks": { "type": "array", "items": { "type": "string" } },
+    "open_questions": { "type": "array", "items": { "type": "string" } },
+    "high_risk_decisions_pending": { "type": "array", "items": { "type": "string" } },
+    "active_locks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "owner_task", "owner_agent"],
+        "properties": {
+          "path": { "type": "string" },
+          "owner_task": { "type": "string" },
+          "owner_agent": { "type": "string" }
+        }
+      }
+    },
+    "file_ownership": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "branch_map": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "worktree_map": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "required_gates": { "type": "array", "items": { "type": "string" } },
+    "latest_gate_results": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "test_commands": { "type": "array", "items": { "type": "string" } },
+    "latest_test_status": { "type": "string", "enum": ["unknown", "not_applicable", "pass", "fail"] },
+    "persona_matrix_path": { "type": "string" },
+    "decision_log_path": { "type": "string" },
+    "assumption_log_path": { "type": "string" },
+    "risk_register_path": { "type": "string" },
+    "rollback_points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "reason", "commit"],
+        "properties": {
+          "id": { "type": "string" },
+          "reason": { "type": "string" },
+          "commit": { "type": "string" }
+        }
+      }
+    },
+    "next_recommended_action": { "type": "string" }
+  }
+}

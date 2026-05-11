@@ -1,0 +1,8 @@
+{
+  "subtask_id": "SUBTASK-TODO-001A",
+  "task_id": "TASK-TODO-001",
+  "action": "Implement local todo store operations.",
+  "expected_output": "A todo store module with add, toggle, delete, and list operations.",
+  "verification_method": "Run unit tests covering all acceptance criteria.",
+  "completion_evidence": ".ai-state/evidence/TASK-TODO-001.json"
+}

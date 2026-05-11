@@ -1,0 +1,14 @@
+{
+  "epic_id": "EPIC-TODO-001",
+  "title": "Local task management",
+  "product_goal": "Let users manage a small local to-do list.",
+  "user_value": "A user can capture, complete, and remove tasks without setup.",
+  "non_goals": ["accounts", "cloud sync", "notifications"],
+  "target_personas": ["PERSONA-FIRST-TIME", "PERSONA-KEYBOARD"],
+  "included_stories": ["STORY-TODO-001"],
+  "excluded_scope": ["authentication", "server persistence"],
+  "risks": ["empty task handling may be skipped without a negative test"],
+  "dependencies": [],
+  "success_metrics": ["all listed acceptance criteria have tests"],
+  "required_gates": ["spec-readiness", "task-readiness", "spec-trace", "test-evidence", "persona-qa", "state-checkpoint"]
+}

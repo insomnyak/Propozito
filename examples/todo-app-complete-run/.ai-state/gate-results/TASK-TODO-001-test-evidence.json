@@ -1,0 +1,11 @@
+{
+  "gate_id": "test-evidence",
+  "task_id": "TASK-TODO-001",
+  "agent": "evidence-verifier",
+  "timestamp": "2026-05-11T12:00:00Z",
+  "status": "pass",
+  "inputs_checked": ["evidence report", "raw test output", "exit code", "test file"],
+  "commands_run": ["node tests/todo-store.test.js"],
+  "findings": ["Raw output exists and exit code is 0."],
+  "routing_decision": "proceed_to_persona_qa"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Assumption",
+  "type": "object",
+  "required": ["id", "task_id", "assumption", "severity", "reversibility", "source", "review_status"],
+  "properties": {
+    "id": { "type": "string" },
+    "task_id": { "type": "string" },
+    "assumption": { "type": "string" },
+    "severity": { "type": "string", "enum": ["low", "medium", "high"] },
+    "reversibility": { "type": "string" },
+    "source": { "type": "string" },
+    "review_status": { "type": "string", "enum": ["logged", "reviewed", "approved", "rejected"] }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "gate_id": "state-checkpoint",
+  "task_id": "TASK-TODO-001",
+  "agent": "state-manager",
+  "timestamp": "2026-05-11T12:00:00Z",
+  "status": "pass",
+  "inputs_checked": ["project state", "task ledger", "evidence path", "gate result paths"],
+  "commands_run": [],
+  "findings": ["Project state and task ledger point to durable evidence and gate records."],
+  "routing_decision": "mark_task_done"
+}

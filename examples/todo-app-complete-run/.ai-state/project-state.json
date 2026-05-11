@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.1",
+  "project_id": "todo-app-complete-run",
+  "project_name": "Simple To-Do Application Example",
+  "current_phase": "release-readiness",
+  "status": "release_ready",
+  "current_branch": "example/TASK-TODO-001",
+  "current_commit": "no-git-example",
+  "last_checkpoint": "2026-05-11T12:00:00Z",
+  "active_tasks": [],
+  "blocked_tasks": [],
+  "completed_tasks": ["TASK-TODO-001"],
+  "open_questions": [],
+  "high_risk_decisions_pending": [],
+  "active_locks": [],
+  "file_ownership": {
+    "src/todo-store.js": "TASK-TODO-001",
+    "tests/todo-store.test.js": "TASK-TODO-001"
+  },
+  "branch_map": {
+    "TASK-TODO-001": "example/TASK-TODO-001"
+  },
+  "worktree_map": {},
+  "required_gates": ["task-readiness", "spec-trace", "test-evidence", "persona-qa", "state-checkpoint"],
+  "latest_gate_results": {
+    "task-readiness": ".ai-state/gate-results/TASK-TODO-001-task-readiness.json",
+    "spec-trace": ".ai-state/gate-results/TASK-TODO-001-spec-trace.json",
+    "test-evidence": ".ai-state/gate-results/TASK-TODO-001-test-evidence.json",
+    "persona-qa": ".ai-state/gate-results/TASK-TODO-001-persona-qa.json",
+    "state-checkpoint": ".ai-state/gate-results/TASK-TODO-001-state-checkpoint.json"
+  },
+  "test_commands": ["node tests/todo-store.test.js"],
+  "latest_test_status": "pass",
+  "persona_matrix_path": ".ai-state/persona-matrix.md",
+  "decision_log_path": ".ai-state/decision-log.md",
+  "assumption_log_path": ".ai-state/assumptions.md",
+  "risk_register_path": ".ai-state/risk-register.md",
+  "rollback_points": [
+    {
+      "id": "ROLLBACK-TODO-001",
+      "reason": "Before local todo store fixture implementation",
+      "commit": "no-git-example"
+    }
+  ],
+  "next_recommended_action": "Use this example as a fixture for validators and documentation."
+}

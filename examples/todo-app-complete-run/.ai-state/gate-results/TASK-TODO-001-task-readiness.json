@@ -1,0 +1,11 @@
+{
+  "gate_id": "task-readiness",
+  "task_id": "TASK-TODO-001",
+  "agent": "task-readiness-auditor",
+  "timestamp": "2026-05-11T12:00:00Z",
+  "status": "pass",
+  "inputs_checked": ["task ledger", "burst plan", "feature goal contract"],
+  "commands_run": [],
+  "findings": ["Task has requirement IDs, acceptance criteria IDs, file boundaries, tests, evidence plan, and gates."],
+  "routing_decision": "proceed_to_implementation"
+}

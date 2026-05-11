@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1",
+  "tasks": [
+    {
+      "task_id": "TASK-TODO-001",
+      "story_id": "STORY-TODO-001",
+      "objective": "Implement and test a small local todo store.",
+      "owner_agent": "implementation-agent",
+      "status": "done",
+      "requirement_ids": ["REQ-TODO-001", "REQ-TODO-002", "REQ-TODO-003"],
+      "acceptance_criteria_ids": ["AC-TODO-001", "AC-TODO-002", "AC-TODO-003", "AC-TODO-004"],
+      "allowed_files": ["src/todo-store.js", "tests/todo-store.test.js"],
+      "disallowed_files": ["package.json", ".ai-state/project-state.json"],
+      "dependencies": [],
+      "required_tests": ["node tests/todo-store.test.js"],
+      "required_gates": ["task-readiness", "spec-trace", "test-evidence", "persona-qa", "state-checkpoint"],
+      "evidence_requirements": ["changed files", "test command", "raw output", "exit code", "known limitations"],
+      "risk_level": "low",
+      "rollback_notes": "Remove src/todo-store.js and tests/todo-store.test.js from the example fixture.",
+      "human_escalation_triggers": ["requirement changes", "scope expansion beyond local-only behavior"],
+      "evidence_path": ".ai-state/evidence/TASK-TODO-001.json",
+      "gate_result_paths": [
+        ".ai-state/gate-results/TASK-TODO-001-task-readiness.json",
+        ".ai-state/gate-results/TASK-TODO-001-spec-trace.json",
+        ".ai-state/gate-results/TASK-TODO-001-test-evidence.json",
+        ".ai-state/gate-results/TASK-TODO-001-persona-qa.json",
+        ".ai-state/gate-results/TASK-TODO-001-state-checkpoint.json"
+      ],
+      "commit_hashes": [],
+      "no_commit_reason": "Example fixture is not inside an initialized Git repository."
+    }
+  ]
+}

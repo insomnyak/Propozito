@@ -1,0 +1,11 @@
+{
+  "name": "ai-dev-orchestration-framework",
+  "version": "0.1.0-alpha",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "validate:example": "node scripts/validate-state.js examples/todo-app-complete-run && node scripts/validate-task.js examples/todo-app-complete-run && node scripts/validate-evidence.js examples/todo-app-complete-run && node scripts/validate-gate-result.js examples/todo-app-complete-run && node scripts/validate-traceability.js examples/todo-app-complete-run",
+    "validate:skills": "node scripts/validate-skills.js",
+    "validate:repo": "node scripts/check-repo-cleanliness.js ."
+  }
+}

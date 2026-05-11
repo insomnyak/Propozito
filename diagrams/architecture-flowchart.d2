@@ -1,0 +1,129 @@
+direction: right
+
+ProjectOwner: Project Owner {shape: person}
+
+subgraph cluster_ai_framework {
+  label: "AI Development Orchestration Framework"
+
+  OrchestratorAgent: Orchestrator Agent {shape: hexagon}
+  IntegrityAuditor: Integrity Auditor Agent {shape: hexagon}
+  HumanEscalation: Human Escalation Agent {shape: hexagon}
+  StateManager: State Manager Agent {shape: hexagon}
+
+  subgraph cluster_dev_agents {
+    label: "Development Agents"
+    ProductManager: Product Manager Agent
+    RequirementsAnalyst: Requirements Analyst Agent
+    SystemArchitect: System Architect Agent
+    FrontendEngineer: Frontend Engineer Agent
+    BackendEngineer: Backend Engineer Agent
+    DatabaseAgent: Database/Data Agent
+    TestEngineer: Test Engineer Agent
+    QAAgent: QA Agent
+    SecurityAgent: Security Agent
+    DevOpsRelease: DevOps/Release Agent
+    PersonaGenerator: Persona Generator Agent
+    PersonaQA: Persona QA Agent
+  }
+
+  subgraph cluster_artifacts {
+    label: "Artifacts & State"
+    ProjectState: PROJECT_STATE.json {shape: cylinder}
+    PurposeContract: Project Purpose Contract {shape: document}
+    FeatureContracts: Feature Goal Contracts {shape: document}
+    RequirementsSpec: Requirements Spec {shape: document}
+    ArchitectureSpec: Architecture Spec {shape: document}
+    APICotracts: API Contracts {shape: document}
+    Codebase: Codebase
+    TestSuites: Test Suites
+    QAReports: QA Reports {shape: document}
+    SecurityReports: Security Reports {shape: document}
+    DeploymentArtifacts: Deployment Artifacts
+    UATReports: UAT Reports {shape: document}
+    PersonaProfiles: User Persona Profiles {shape: document}
+    Evidence: Task Completion Evidence {shape: document}
+    IntegrityReports: Integrity Reports {shape: document}
+  }
+}
+
+# Connections
+ProjectOwner -> OrchestratorAgent: Initial Request
+OrchestratorAgent -> ProductManager: Assign Task
+ProductManager -> PurposeContract: Creates
+ProductManager -> FeatureContracts: Creates
+ProductManager -> ProjectState: Updates
+
+OrchestratorAgent -> RequirementsAnalyst: Assign Task
+RequirementsAnalyst -> RequirementsSpec: Creates
+RequirementsAnalyst -> ProjectState: Updates
+
+OrchestratorAgent -> SystemArchitect: Assign Task
+SystemArchitect -> ArchitectureSpec: Creates
+SystemArchitect -> APICotracts: Creates
+SystemArchitect -> ProjectState: Updates
+
+OrchestratorAgent -> FrontendEngineer: Assign Task
+FrontendEngineer -> Codebase: Writes Frontend Code
+FrontendEngineer -> TestSuites: Writes UI Tests
+FrontendEngineer -> ProjectState: Updates
+
+OrchestratorAgent -> BackendEngineer: Assign Task
+BackendEngineer -> Codebase: Writes Backend Code
+BackendEngineer -> TestSuites: Writes API Tests
+BackendEngineer -> ProjectState: Updates
+
+OrchestratorAgent -> DatabaseAgent: Assign Task
+DatabaseAgent -> Codebase: Writes DB Scripts
+DatabaseAgent -> ProjectState: Updates
+
+OrchestratorAgent -> TestEngineer: Assign Task
+TestEngineer -> TestSuites: Creates/Updates Tests
+TestEngineer -> ProjectState: Updates
+
+OrchestratorAgent -> QAAgent: Assign Task
+QAAgent -> QAReports: Creates
+QAAgent -> ProjectState: Updates
+
+OrchestratorAgent -> SecurityAgent: Assign Task
+SecurityAgent -> SecurityReports: Creates
+SecurityAgent -> ProjectState: Updates
+
+OrchestratorAgent -> DevOpsRelease: Assign Task
+DevOpsRelease -> DeploymentArtifacts: Creates
+DevOpsRelease -> ProjectState: Updates
+
+OrchestratorAgent -> PersonaGenerator: Assign Task
+PersonaGenerator -> PersonaProfiles: Creates
+PersonaGenerator -> ProjectState: Updates
+
+OrchestratorAgent -> PersonaQA: Assign Task
+PersonaQA -> UATReports: Creates
+PersonaQA -> ProjectState: Updates
+
+# Integrity Flow
+OrchestratorAgent -> IntegrityAuditor: Submit Evidence
+IntegrityAuditor -> Evidence: Verifies
+IntegrityAuditor -> IntegrityReports: Creates
+IntegrityAuditor -> OrchestratorAgent: Report Status
+IntegrityAuditor -> HumanEscalation: Escalates (if needed)
+
+# State Management
+OrchestratorAgent <-> StateManager: Manage State
+StateManager <-> ProjectState: Read/Write
+
+# Human Interaction
+HumanEscalation -> ProjectOwner: Request Decision
+ProjectOwner -> HumanEscalation: Provide Decision
+HumanEscalation -> OrchestratorAgent: Relay Decision
+
+# Artifact Dependencies
+
+
+
+
+
+
+
+
+
+

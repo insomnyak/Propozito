@@ -1,0 +1,31 @@
+{
+  "story_id": "STORY-TODO-001",
+  "epic_id": "EPIC-TODO-001",
+  "persona": "PERSONA-FIRST-TIME",
+  "user_goal": "Create and manage a simple task list.",
+  "user_story": "As a first-time user, I want to add, complete, and delete tasks so that I can manage a short list.",
+  "acceptance_criteria": [
+    {
+      "id": "AC-TODO-001",
+      "description": "Given non-empty text, when the user adds a task, then the task appears in the list."
+    },
+    {
+      "id": "AC-TODO-002",
+      "description": "Given blank text, when the user adds a task, then the task is rejected."
+    },
+    {
+      "id": "AC-TODO-003",
+      "description": "Given an existing task, when the user marks it complete, then its completed state changes."
+    },
+    {
+      "id": "AC-TODO-004",
+      "description": "Given an existing task, when the user deletes it, then it no longer appears."
+    }
+  ],
+  "happy_path": ["add task", "mark complete", "delete task"],
+  "edge_cases": ["blank task title"],
+  "failure_states": ["invalid input returns an error"],
+  "security_privacy_considerations": ["local-only data has no authentication boundary"],
+  "required_tests": ["node tests/todo-store.test.js"],
+  "required_persona_qa": ["PERSONA-FIRST-TIME"]
+}

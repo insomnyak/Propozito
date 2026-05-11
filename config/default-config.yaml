@@ -1,0 +1,50 @@
+# Default Configuration for HMADF
+
+# This file contains default settings for the Hardened Multi-Agent Development Framework.
+# These settings can be overridden by project-specific configurations.
+
+# --- General Settings ---
+project_name: "default-project"
+project_root: "/home/ubuntu/projects/default-project"
+
+# --- Agent Configuration ---
+# Define which agents are active and their default parameters.
+# Each agent corresponds to a skill in the 'skills/' directory.
+active_agents:
+  - orchestrator
+  - product-manager
+  - requirements-analyst
+  - system-architect
+  - frontend-engineer
+  - backend-engineer
+  - database-agent
+  - test-engineer
+  - qa-agent
+  - security-agent
+  - devops-release-agent
+  - integrity-auditor
+  - persona-generator
+  - persona-qa
+  - human-escalation
+
+# --- Integrity Layer Settings ---
+integrity_checks_enabled: true
+strict_mode: true # If true, any integrity check failure halts progress and requires human intervention.
+
+# --- Persona Settings ---
+min_personas_to_generate: 3
+max_personas_to_generate: 5
+
+# --- File Paths (relative to project_root) ---
+docs_dir: "docs"
+skills_dir: "skills"
+templates_dir: "templates"
+workflows_dir: "workflows"
+config_dir: "config"
+project_state_file: "PROJECT_STATE.json"
+
+# --- Human Escalation Settings ---
+human_escalation_threshold: "critical" # Options: "critical", "warning", "info"
+
+# --- Versioning ---
+framework_version: "1.0.0"

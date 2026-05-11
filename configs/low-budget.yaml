@@ -1,0 +1,13 @@
+framework_version: "0.1-alpha"
+max_concurrent_agents: 1
+max_persona_agents: 1
+allow_parallel_implementation: false
+allow_competing_architecture_proposals: false
+require_e2e_for_frontend: true
+require_security_gate: true
+require_accessibility_gate: false
+require_state_checkpoint: true
+push_frequency: "after_passing_task"
+coverage_threshold: null
+escalation_channel: "manual"
+timeout_behavior: "pause_high_risk_continue_low_risk"

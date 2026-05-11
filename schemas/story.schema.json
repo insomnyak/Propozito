@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Story",
+  "type": "object",
+  "required": ["story_id", "epic_id", "persona", "user_goal", "user_story", "acceptance_criteria", "happy_path", "edge_cases", "failure_states", "required_tests", "required_persona_qa"],
+  "properties": {
+    "story_id": { "type": "string" },
+    "epic_id": { "type": "string" },
+    "persona": { "type": "string" },
+    "user_goal": { "type": "string" },
+    "user_story": { "type": "string" },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "description"],
+        "properties": {
+          "id": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "happy_path": { "type": "array", "items": { "type": "string" } },
+    "edge_cases": { "type": "array", "items": { "type": "string" } },
+    "failure_states": { "type": "array", "items": { "type": "string" } },
+    "security_privacy_considerations": { "type": "array", "items": { "type": "string" } },
+    "required_tests": { "type": "array", "items": { "type": "string" } },
+    "required_persona_qa": { "type": "array", "items": { "type": "string" } }
+  }
+}

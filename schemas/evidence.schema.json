@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Evidence",
+  "type": "object",
+  "required": ["evidence_id", "task_id", "agent", "timestamp", "changed_files", "requirement_ids", "acceptance_criteria_ids", "tests_added_or_modified", "commands", "known_limitations", "human_approvals"],
+  "properties": {
+    "evidence_id": { "type": "string" },
+    "task_id": { "type": "string" },
+    "agent": { "type": "string" },
+    "timestamp": { "type": "string" },
+    "changed_files": { "type": "array", "items": { "type": "string" } },
+    "requirement_ids": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "acceptance_criteria_ids": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "tests_added_or_modified": { "type": "array", "items": { "type": "string" } },
+    "commands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["command", "raw_output_path", "exit_code"],
+        "properties": {
+          "command": { "type": "string" },
+          "raw_output_path": { "type": "string" },
+          "exit_code": { "type": "integer" }
+        }
+      }
+    },
+    "known_limitations": { "type": "array", "items": { "type": "string" } },
+    "human_approvals": { "type": "array", "items": { "type": "string" } }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "gate_id": "spec-trace",
+  "task_id": "TASK-TODO-001",
+  "agent": "traceability-manager",
+  "timestamp": "2026-05-11T12:00:00Z",
+  "status": "pass",
+  "inputs_checked": ["feature goal contract", "traceability matrix", "changed files"],
+  "commands_run": [],
+  "findings": ["All changed files map to requirements and acceptance criteria."],
+  "routing_decision": "proceed_to_test_evidence_gate"
+}

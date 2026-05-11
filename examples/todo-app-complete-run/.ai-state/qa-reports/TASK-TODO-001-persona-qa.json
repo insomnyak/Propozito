@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-TODO-001",
+  "persona_id": "PERSONA-FIRST-TIME",
+  "scenario": "Create, complete, and delete a task from a local list.",
+  "acceptance_criteria_covered": ["AC-TODO-001", "AC-TODO-002", "AC-TODO-003", "AC-TODO-004"],
+  "result": "pass",
+  "evidence": [".ai-state/test-history/TASK-TODO-001-test-output.txt"],
+  "findings": ["Local behavior matches first-time user goal in this non-UI fixture."]
+}

@@ -1,0 +1,11 @@
+{
+  "burst_id": "BURST-TODO-001",
+  "task_id": "TASK-TODO-001",
+  "objective": "Implement and test a small local todo store.",
+  "allowed_files": ["src/todo-store.js", "tests/todo-store.test.js"],
+  "disallowed_files": ["package.json", ".ai-state/project-state.json"],
+  "planned_tests": ["node tests/todo-store.test.js"],
+  "evidence_plan": [".ai-state/evidence/TASK-TODO-001.json", ".ai-state/test-history/TASK-TODO-001-test-output.txt"],
+  "required_gates": ["task-readiness", "spec-trace", "test-evidence", "persona-qa", "state-checkpoint"],
+  "max_files_changed": 2
+}
