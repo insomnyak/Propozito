@@ -5,7 +5,7 @@
 
 # --- General Settings ---
 project_name: "default-project"
-project_root: "/home/ubuntu/projects/default-project"
+project_root: "<project-root>"
 
 # --- Agent Configuration ---
 # Define which agents are active and their default parameters.

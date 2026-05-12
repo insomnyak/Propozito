@@ -13,4 +13,4 @@ description:
 
 Platform-specific extensions belong in `skills/adapters/`.
 
-Legacy `skills/skill-*` folders, if present in older archives, should be treated as historical adapter material rather than the authoritative framework specification.
+Legacy `skill-*` folders are retained only under `archive/legacy-skills/`. They are historical migration material, not the authoritative framework specification.

@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.1",
+  "tasks": [
+    {
+      "task_id": "TASK-TODO-FAIL-001",
+      "story_id": "STORY-TODO-FAIL-001",
+      "objective": "Implement local todo add behavior.",
+      "owner_agent": "implementation-agent",
+      "status": "done",
+      "requirement_ids": ["REQ-TODO-FAIL-001", "REQ-TODO-FAIL-002"],
+      "acceptance_criteria_ids": ["AC-TODO-FAIL-001", "AC-TODO-FAIL-002"],
+      "allowed_files": ["src/todo-store.js", "tests/todo-store.test.js"],
+      "disallowed_files": ["package.json"],
+      "dependencies": [],
+      "required_tests": ["node tests/todo-store.test.js"],
+      "required_gates": ["test-evidence", "spec-trace", "persona-qa"],
+      "evidence_requirements": ["changed files", "test command", "raw output", "exit code", "known limitations"],
+      "risk_level": "low",
+      "rollback_notes": "Remove incomplete todo-store implementation.",
+      "human_escalation_triggers": [],
+      "evidence_path": ".ai-state/evidence/TASK-TODO-FAIL-001.json",
+      "gate_result_paths": [".ai-state/gate-results/TASK-TODO-FAIL-001-test-evidence.json"],
+      "commit_hashes": []
+    }
+  ]
+}

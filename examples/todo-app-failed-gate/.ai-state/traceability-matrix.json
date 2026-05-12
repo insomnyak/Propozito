@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.1",
+  "entries": [
+    {
+      "requirement_id": "REQ-TODO-FAIL-001",
+      "acceptance_criterion_id": "AC-TODO-FAIL-001",
+      "task_id": "TASK-TODO-FAIL-001",
+      "implementation_files": ["src/todo-store.js"],
+      "test_files": ["tests/todo-store.test.js"],
+      "test_command": "node tests/todo-store.test.js",
+      "evidence_report": ".ai-state/evidence/TASK-TODO-FAIL-001.json",
+      "gate_result": ".ai-state/gate-results/TASK-TODO-FAIL-001-test-evidence.json",
+      "persona_qa_result": ".ai-state/qa-reports/TASK-TODO-FAIL-001-persona-qa.json"
+    }
+  ]
+}

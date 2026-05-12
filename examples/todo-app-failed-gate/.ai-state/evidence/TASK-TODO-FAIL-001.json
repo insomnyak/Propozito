@@ -1,0 +1,19 @@
+{
+  "evidence_id": "EVIDENCE-TASK-TODO-FAIL-001",
+  "task_id": "TASK-TODO-FAIL-001",
+  "agent": "implementation-agent",
+  "timestamp": "2026-05-11T12:00:00Z",
+  "changed_files": ["src/todo-store.js", "tests/todo-store.test.js"],
+  "requirement_ids": ["REQ-TODO-FAIL-001", "REQ-TODO-FAIL-002"],
+  "acceptance_criteria_ids": ["AC-TODO-FAIL-001", "AC-TODO-FAIL-002"],
+  "tests_added_or_modified": ["tests/todo-store.test.js"],
+  "commands": [
+    {
+      "command": "node tests/todo-store.test.js",
+      "raw_output_path": ".ai-state/test-history/TASK-TODO-FAIL-001-test-output.txt",
+      "exit_code": 0
+    }
+  ],
+  "known_limitations": ["Blank task behavior is assumed working."],
+  "human_approvals": []
+}

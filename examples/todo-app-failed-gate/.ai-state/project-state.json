@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1",
+  "project_id": "todo-app-failed-gate",
+  "project_name": "Failed Gate Example",
+  "current_phase": "verification",
+  "status": "release_ready",
+  "current_branch": "example/TASK-TODO-FAIL-001",
+  "current_commit": "no-git-example",
+  "last_checkpoint": "2026-05-11T12:00:00Z",
+  "active_tasks": [],
+  "blocked_tasks": [],
+  "completed_tasks": ["TASK-TODO-FAIL-001"],
+  "open_questions": [],
+  "high_risk_decisions_pending": [],
+  "active_locks": [],
+  "file_ownership": {
+    "src/todo-store.js": "TASK-TODO-FAIL-001",
+    "tests/todo-store.test.js": "TASK-TODO-FAIL-001"
+  },
+  "branch_map": {
+    "TASK-TODO-FAIL-001": "example/TASK-TODO-FAIL-001"
+  },
+  "worktree_map": {},
+  "required_gates": ["task-readiness", "spec-trace", "test-evidence", "persona-qa", "state-checkpoint"],
+  "latest_gate_results": {
+    "test-evidence": ".ai-state/gate-results/TASK-TODO-FAIL-001-test-evidence.json"
+  },
+  "test_commands": ["node tests/todo-store.test.js"],
+  "latest_test_status": "fail",
+  "persona_matrix_path": ".ai-state/persona-matrix.md",
+  "decision_log_path": ".ai-state/decision-log.md",
+  "assumption_log_path": ".ai-state/assumptions.md",
+  "risk_register_path": ".ai-state/risk-register.md",
+  "rollback_points": [],
+  "next_recommended_action": "Return task to implementation and evidence collection."
+}

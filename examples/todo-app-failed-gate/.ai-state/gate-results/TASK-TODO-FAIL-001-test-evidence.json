@@ -1,0 +1,11 @@
+{
+  "gate_id": "test-evidence",
+  "task_id": "TASK-TODO-FAIL-001",
+  "agent": "evidence-verifier",
+  "timestamp": "2026-05-11T12:00:00Z",
+  "status": "fail",
+  "inputs_checked": ["evidence report", "raw test output", "test file"],
+  "commands_run": ["node tests/todo-store.test.js"],
+  "findings": ["Raw output is missing and test file has no assertion."],
+  "routing_decision": "return_to_implementation_agent"
+}
