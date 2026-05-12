@@ -1,4 +1,4 @@
-# AI Development Orchestration Framework
+# Propozito Orchestrator
 
 Status: **v0.1-alpha**
 

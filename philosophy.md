@@ -1,6 +1,6 @@
 # Framework Philosophy
 
-The Hardened Multi-Agent Development Framework (HMADF) is built on the premise that AI agents, while powerful, require strict boundaries, verifiable evidence, and goal-oriented direction to produce reliable software.
+The Propozito Orchestrator is built on the premise that AI agents, while powerful, require strict boundaries, verifiable evidence, and goal-oriented direction to produce reliable software.
 
 ## Core Tenets
 

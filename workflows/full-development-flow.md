@@ -1,6 +1,6 @@
 # Full Development Flow
 
-This document outlines the end-to-end workflow for developing a new feature or application using the Hardened Multi-Agent Development Framework (HMADF).
+This document outlines the end-to-end workflow for developing a new feature or application using the Propozito Orchestrator.
 
 ## Phase 1: Project Definition (Orchestrator, Product Manager, Human Owner)
 

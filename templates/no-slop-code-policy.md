@@ -1,6 +1,6 @@
 # No Slop Code Policy
 
-This policy outlines strict guidelines to prevent the generation of low-quality, incomplete, or misleading code and artifacts within the Hardened Multi-Agent Development Framework (HMADF). Adherence to this policy is enforced by the Integrity Auditor Agent.
+This policy outlines strict guidelines to prevent the generation of low-quality, incomplete, or misleading code and artifacts within the Propozito Orchestrator. Adherence to this policy is enforced by the Integrity Auditor Agent.
 
 ## Prohibited Practices
 
@@ -21,4 +21,4 @@ The Integrity Auditor Agent will actively check for violations of this policy. A
 
 ## Rationale
 
-This policy ensures that all code and artifacts produced by the HMADF are of high quality, reliable, and genuinely contribute to the project's goals, preventing technical debt and maintaining trust in the AI development process.
+This policy ensures that all code and artifacts produced by the Propozito Orchestrator are of high quality, reliable, and genuinely contribute to the project's goals, preventing technical debt and maintaining trust in the AI development process.

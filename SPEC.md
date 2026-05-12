@@ -4,7 +4,7 @@ Version: `0.1-alpha`
 
 ## Purpose
 
-The AI Development Orchestration Framework defines portable protocols, schemas, gates, validators, and state artifacts for AI-assisted software development.
+The Propozito Orchestrator defines portable protocols, schemas, gates, validators, and state artifacts for AI-assisted software development.
 
 Its purpose is to reduce common failure modes:
 

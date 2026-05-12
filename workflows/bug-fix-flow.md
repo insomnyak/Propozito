@@ -1,6 +1,6 @@
 # Bug Fix Flow
 
-This document outlines the workflow for identifying, fixing, and verifying bugs within the Hardened Multi-Agent Development Framework (HMADF).
+This document outlines the workflow for identifying, fixing, and verifying bugs within the Propozito Orchestrator.
 
 ## Phase 1: Bug Identification & Reporting (QA Agent, Persona QA)
 
