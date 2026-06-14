@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Security Boundary",
+  "type": "object",
+  "required": ["schema_version", "profile_id", "has_frontend", "has_backend", "browser_backend_direct_access_allowed", "preferred_boundary", "forbidden_client_exposures"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "profile_id": { "type": "string" },
+    "has_frontend": { "type": "boolean" },
+    "has_backend": { "type": "boolean" },
+    "browser_backend_direct_access_allowed": { "type": "boolean" },
+    "preferred_boundary": { "type": "string" },
+    "forbidden_client_exposures": { "type": "array", "items": { "type": "string" } },
+    "client_source_paths": { "type": "array", "items": { "type": "string" } }
+  }
+}

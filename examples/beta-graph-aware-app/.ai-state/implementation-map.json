@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.2",
+  "subsystems": [
+    {
+      "subsystem_id": "SUBSYSTEM-NOTES",
+      "purpose": "Create, store, list, and render notes in the beta fixture.",
+      "owned_files": ["src/client/notes-ui.js", "src/server/notes-service.js"],
+      "adjacent_files": ["tests/notes.test.js"],
+      "key_tests": ["node tests/notes.test.js"],
+      "runtime_routes": ["/notes"],
+      "data_owned": ["note title"],
+      "state_owned": ["in-memory notes list"],
+      "external_dependencies": [],
+      "security_boundaries": ["browser_to_controller_to_backend"],
+      "current_status": "verified",
+      "known_risks": ["Example uses in-memory state only."],
+      "last_verified_at": "2026-06-13T12:00:00Z"
+    }
+  ]
+}

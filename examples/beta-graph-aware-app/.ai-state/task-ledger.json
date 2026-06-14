@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.2",
+  "tasks": [
+    {
+      "task_id": "TASK-BETA-001",
+      "story_id": "STORY-BETA-001",
+      "objective": "Create and render a note with graph-aware beta artifacts.",
+      "owner_agent": "implementation-agent",
+      "status": "done",
+      "requirement_ids": ["REQ-BETA-001", "REQ-BETA-002"],
+      "acceptance_criteria_ids": ["AC-BETA-001", "AC-BETA-002"],
+      "allowed_files": ["src/client/notes-ui.js", "src/server/notes-service.js", "tests/notes.test.js"],
+      "disallowed_files": ["package.json"],
+      "dependencies": [],
+      "required_tests": ["node tests/notes.test.js"],
+      "required_gates": ["impact-awareness", "placeholder-burndown", "signoff-integrity", "state-lifecycle", "frontend-backend-boundary", "no-orphan-capability"],
+      "evidence_requirements": ["raw output", "verification surface", "signoff", "graph impact"],
+      "risk_level": "low",
+      "rollback_notes": "Remove beta fixture files.",
+      "human_escalation_triggers": ["failed validator", "security boundary change"],
+      "evidence_path": ".ai-state/evidence/TASK-BETA-001.json",
+      "gate_result_paths": [".ai-state/gate-results/TASK-BETA-001-impact-awareness.json"],
+      "commit_hashes": [],
+      "no_commit_reason": "Example fixture uses no-git-example-beta commit marker."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Pre Prompt",
+  "type": "object",
+  "required": ["pre_prompt_id", "submitted_at", "submitted_by", "raw_request", "request_type", "target_ai_coder"],
+  "properties": {
+    "pre_prompt_id": { "type": "string" },
+    "submitted_at": { "type": "string" },
+    "submitted_by": { "type": "string" },
+    "raw_request": { "type": "string" },
+    "request_type": { "type": "string" },
+    "target_ai_coder": { "type": "string" }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.2",
+  "generated_at": "2026-06-13T12:00:00Z",
+  "mode": "handoff",
+  "source_paths": [".ai-state/project-state.json", ".ai-state/app-relationship-graph.json", ".ai-state/implementation-map.json"],
+  "project_summary": "Generic notes beta fixture for Propozito v0.2 graph-aware validation.",
+  "current_work_item": "TASK-BETA-001",
+  "relationship_graph_summary": "7 nodes and 6 edges covering feature, task, files, test, placeholder, and verification.",
+  "implementation_map_summary": "One notes subsystem owns client renderer, server service, and test.",
+  "open_questions": [],
+  "next_safe_action": "Run npm run validate:beta."
+}

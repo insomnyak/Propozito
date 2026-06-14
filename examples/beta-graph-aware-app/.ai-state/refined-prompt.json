@@ -1,0 +1,22 @@
+{
+  "prompt_id": "PROMPT-BETA-001",
+  "source_pre_prompt_id": "PRE-BETA-001",
+  "objective": "Implement a small notes create/list/render capability and prove it through graph-aware beta artifacts.",
+  "non_goals": ["persistent storage", "authentication", "external integrations"],
+  "requirements": ["REQ-BETA-001", "REQ-BETA-002"],
+  "acceptance_criteria": ["AC-BETA-001", "AC-BETA-002"],
+  "affected_graph_nodes": ["TASK-BETA-001", "FEATURE-BETA-001", "FILE-CLIENT-NOTES", "FILE-SERVER-NOTES", "TEST-NOTES"],
+  "file_boundaries": {
+    "allowed_files": ["src/client/notes-ui.js", "src/server/notes-service.js", "tests/notes.test.js"],
+    "disallowed_files": ["package.json"]
+  },
+  "test_plan": ["node tests/notes.test.js"],
+  "verification_plan": ["VERIFY-BETA-001"],
+  "evidence_plan": [".ai-state/test-history/TASK-BETA-001-test-output.txt"],
+  "required_gates": ["impact-awareness", "placeholder-burndown", "signoff-integrity"],
+  "state_updates": [".ai-state/app-relationship-graph.json", ".ai-state/project-status.json"],
+  "commit_push_policy": "no commit required for fixture; production projects commit after verified unit",
+  "rollback_plan": "Remove beta fixture files if the example must be reverted.",
+  "human_escalation_triggers": ["security boundary change", "failed beta validator"],
+  "completion_report_requirements": ["validator output", "known limitations", "next recommended action"]
+}

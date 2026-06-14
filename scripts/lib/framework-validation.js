@@ -53,6 +53,36 @@ function readTraceability(root, errors) {
   return readJson(path.join(root, ".ai-state", "traceability-matrix.json"), errors);
 }
 
+function readAiStateJson(root, fileName, errors) {
+  return readJson(path.join(root, ".ai-state", fileName), errors);
+}
+
+function requirePath(root, relativePath, label, errors) {
+  if (!relativePath) {
+    errors.push(`${label}: missing path`);
+    return;
+  }
+  if (!exists(root, relativePath)) {
+    errors.push(`${label}: path '${relativePath}' does not exist`);
+  }
+}
+
+function requireNonEmptyString(value, label, errors) {
+  if (typeof value !== "string" || value.trim().length === 0) {
+    errors.push(`${label}: must be a non-empty string`);
+  }
+}
+
+function readText(root, relativePath, errors) {
+  const fullPath = path.resolve(root, relativePath);
+  try {
+    return fs.readFileSync(fullPath, "utf8");
+  } catch (error) {
+    errors.push(`${relativePath}: could not read text (${error.message})`);
+    return "";
+  }
+}
+
 function listFiles(root) {
   const ignored = new Set([".git", "node_modules"]);
   const results = [];
@@ -88,11 +118,15 @@ module.exports = {
   listFiles,
   nonEmptyFile,
   readJson,
+  readAiStateJson,
   readProjectState,
   readTaskLedger,
   readTraceability,
+  readText,
   relative,
   requireArray,
   requireFields,
+  requireNonEmptyString,
+  requirePath,
   resolveRoot
 };

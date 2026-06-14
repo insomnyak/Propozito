@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Terminology Profile",
+  "type": "object",
+  "required": ["schema_version", "profile_id", "preset", "labels"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "profile_id": { "type": "string" },
+    "preset": { "type": "string", "enum": ["agile_jira", "stage_slice", "pmbok_wbs", "simple", "custom"] },
+    "labels": {
+      "type": "object",
+      "required": ["project", "phase", "feature", "story", "task", "subtask", "burst", "gate"],
+      "additionalProperties": { "type": "string" }
+    }
+  }
+}

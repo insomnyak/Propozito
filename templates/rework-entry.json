@@ -1,0 +1,15 @@
+{
+  "feature_id": "FEATURE-001",
+  "work_item_id": "TASK-001",
+  "status": "open",
+  "owner_rejection_note": "",
+  "failure_type": "gate_failure",
+  "root_cause": "Unknown until audited.",
+  "scope_misread": "none_recorded",
+  "tests_that_failed_to_catch_it": [],
+  "new_tests_added": [],
+  "rework_plan": "Define a corrective plan before retrying.",
+  "rework_status": "planned",
+  "accepted_at": "",
+  "lessons_for_framework": []
+}

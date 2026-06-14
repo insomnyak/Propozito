@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "State Lifecycle",
+  "type": "object",
+  "required": ["schema_version", "state_items"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "state_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["state_id", "work_item_id", "what_state_exists", "storage_location", "owner", "survives_restart", "migration_plan", "rollback_plan", "test_plan", "user_verification"],
+        "properties": {
+          "state_id": { "type": "string" },
+          "work_item_id": { "type": "string" },
+          "what_state_exists": { "type": "string" },
+          "storage_location": { "type": "string" },
+          "owner": { "type": "string" },
+          "survives_restart": { "type": "boolean" },
+          "migration_plan": { "type": "string" },
+          "rollback_plan": { "type": "string" },
+          "test_plan": { "type": "string" },
+          "user_verification": { "type": "string" }
+        }
+      }
+    }
+  }
+}

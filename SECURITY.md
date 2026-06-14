@@ -1,6 +1,6 @@
 # Security Policy
 
-This project is an alpha framework for AI-assisted development workflows.
+This project is a beta framework for AI-assisted development workflows. It provides security-oriented protocols and gates, but it does not replace threat modeling, code review, penetration testing, or production security ownership.
 
 ## Reporting Security Issues
 

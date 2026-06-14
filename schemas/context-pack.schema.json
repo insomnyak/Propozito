@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Context Pack",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "mode", "source_paths", "project_summary", "current_work_item", "relationship_graph_summary", "implementation_map_summary", "open_questions", "next_safe_action"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "generated_at": { "type": "string" },
+    "mode": { "type": "string" },
+    "source_paths": { "type": "array", "items": { "type": "string" } },
+    "project_summary": { "type": "string" },
+    "current_work_item": { "type": "string" },
+    "relationship_graph_summary": { "type": "string" },
+    "implementation_map_summary": { "type": "string" },
+    "open_questions": { "type": "array", "items": { "type": "string" } },
+    "next_safe_action": { "type": "string" }
+  }
+}

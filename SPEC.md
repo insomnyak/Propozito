@@ -1,6 +1,6 @@
 # Framework Specification
 
-Version: `0.1-alpha`
+Version: `0.2.0-beta`
 
 ## Purpose
 
@@ -17,6 +17,8 @@ Its purpose is to reduce common failure modes:
 - vague task execution
 - untraceable changes
 - fragile autonomous workflows
+
+The beta specification adds human-visible verification, graph-aware impact analysis, configurable terminology, autonomy profiles, context rotation, prompt refinement, optional semantic memory indexing, and verification surfaces while keeping deterministic repository state canonical.
 
 ## Non-Goals
 
@@ -53,6 +55,8 @@ Project Purpose
 ```
 
 No task is complete unless it is traceable, tested, evidence-backed, gate-approved, persona-validated when applicable, and checkpointed in project state.
+
+For complex systems, applicable beta completion also requires impact awareness, placeholder status, verification surface, signoff state, implementation-map update, prompt-history entry, and context-pack readiness.
 
 ## Evidence Standard
 

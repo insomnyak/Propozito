@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Placeholder Ledger",
+  "type": "object",
+  "required": ["schema_version", "placeholders"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "placeholders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["placeholder_id", "feature_id", "surface", "component_or_module", "what_it_fakes", "risk_if_misread_as_real", "owning_work_item", "replacement_acceptance_criteria", "verification_surface", "state"],
+        "properties": {
+          "placeholder_id": { "type": "string" },
+          "feature_id": { "type": "string" },
+          "surface": { "type": "string" },
+          "component_or_module": { "type": "string" },
+          "what_it_fakes": { "type": "string" },
+          "risk_if_misread_as_real": { "type": "string" },
+          "owning_work_item": { "type": "string" },
+          "replacement_acceptance_criteria": { "type": "array", "items": { "type": "string" } },
+          "verification_surface": { "type": "string" },
+          "state": { "type": "string", "enum": ["placeholder", "planned", "in_progress", "partial", "real", "deferred", "removed"] },
+          "evidence_path": { "type": "string" },
+          "signoff_id": { "type": "string" },
+          "deferred_approval": { "type": "string" }
+        }
+      }
+    }
+  }
+}

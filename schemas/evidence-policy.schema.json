@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Evidence Policy",
+  "type": "object",
+  "required": ["schema_version", "policy_id", "committed_metadata", "uncommitted_artifact_types", "artifacts"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "policy_id": { "type": "string" },
+    "committed_metadata": { "type": "array", "items": { "type": "string" } },
+    "uncommitted_artifact_types": { "type": "array", "items": { "type": "string" } },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["artifact_id", "artifact_type", "path", "content_hash", "storage_location", "committed"],
+        "properties": {
+          "artifact_id": { "type": "string" },
+          "artifact_type": { "type": "string" },
+          "path": { "type": "string" },
+          "content_hash": { "type": "string" },
+          "storage_location": { "type": "string" },
+          "committed": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

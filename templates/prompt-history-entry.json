@@ -1,0 +1,13 @@
+{
+  "prompt_id": "PROMPT-001",
+  "timestamp": "1970-01-01T00:00:00Z",
+  "source_pre_prompt_path": ".ai-state/pre-prompts/PRE-001.json",
+  "refined_prompt_path": ".ai-state/refined-prompts/PROMPT-001.json",
+  "target_ai_coder": "codex",
+  "context_paths": [".ai-state/context-pack.json"],
+  "expected_outputs": ["evidence report", "gate results"],
+  "commit_sha": "",
+  "status": "draft",
+  "outcome": "pending",
+  "lessons_learned": []
+}

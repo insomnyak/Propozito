@@ -1,0 +1,19 @@
+{
+  "evidence_id": "EVIDENCE-TASK-BETA-001",
+  "task_id": "TASK-BETA-001",
+  "agent": "implementation-agent",
+  "timestamp": "2026-06-13T12:00:00Z",
+  "changed_files": ["src/client/notes-ui.js", "src/server/notes-service.js", "tests/notes.test.js"],
+  "requirement_ids": ["REQ-BETA-001", "REQ-BETA-002"],
+  "acceptance_criteria_ids": ["AC-BETA-001", "AC-BETA-002"],
+  "tests_added_or_modified": ["tests/notes.test.js"],
+  "commands": [
+    {
+      "command": "node tests/notes.test.js",
+      "raw_output_path": ".ai-state/test-history/TASK-BETA-001-test-output.txt",
+      "exit_code": 0
+    }
+  ],
+  "known_limitations": ["Fixture uses in-memory state and no real browser runtime."],
+  "human_approvals": ["SIGNOFF-BETA-001"]
+}

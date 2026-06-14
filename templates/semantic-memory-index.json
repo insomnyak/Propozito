@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.2",
+  "index_id": "semantic-memory-index",
+  "canonical_sources": [".ai-state/app-relationship-graph.json"],
+  "nodes": [
+    {
+      "node_id": "SEM-001",
+      "source_artifact": "relationship_graph",
+      "source_path": ".ai-state/app-relationship-graph.json",
+      "source_kind": "graph_node",
+      "canonical_graph_node_id": "FEATURE-001",
+      "text_for_embedding": "Example feature summary for retrieval.",
+      "embedding_provider": "external_or_omitted",
+      "embedding_model": "not_configured",
+      "embedding_dimensions": 0,
+      "embedding_vector_ref": "",
+      "content_hash": "example-hash",
+      "last_indexed_at": "1970-01-01T00:00:00Z"
+    }
+  ]
+}

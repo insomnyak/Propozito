@@ -1,0 +1,15 @@
+{
+  "schema_version": "0.2",
+  "profile_id": "stage-slice",
+  "preset": "stage_slice",
+  "labels": {
+    "project": "Project",
+    "phase": "Stage",
+    "feature": "Slice",
+    "story": "Track",
+    "task": "Task",
+    "subtask": "Step",
+    "burst": "Burst",
+    "gate": "Gate"
+  }
+}

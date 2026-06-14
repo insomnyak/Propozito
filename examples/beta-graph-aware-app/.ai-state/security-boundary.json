@@ -1,0 +1,10 @@
+{
+  "schema_version": "0.2",
+  "profile_id": "browser-to-controller-to-backend",
+  "has_frontend": true,
+  "has_backend": true,
+  "browser_backend_direct_access_allowed": false,
+  "preferred_boundary": "Browser -> Controller/BFF -> Backend",
+  "forbidden_client_exposures": ["backend host", "backend port", "secrets", "internal endpoint map", "internal service URL"],
+  "client_source_paths": ["src/client"]
+}

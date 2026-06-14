@@ -28,4 +28,4 @@ Propozito defines specialist agents, but users should think in modes first. Mode
 
 - Release owner or release-readiness auditor: prevents release claims without passed gates, known issues, environment notes, rollback plan, and required approvals.
 
-Use only the modes needed for the current project. Alpha Propozito does not require every specialist agent to run for every task.
+Use only the modes needed for the current project. Beta Propozito does not require every specialist agent to run for every task.

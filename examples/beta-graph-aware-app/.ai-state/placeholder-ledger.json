@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.2",
+  "placeholders": [
+    {
+      "placeholder_id": "PLACEHOLDER-BETA-001",
+      "feature_id": "FEATURE-BETA-001",
+      "surface": "notes list",
+      "component_or_module": "src/client/notes-ui.js",
+      "what_it_fakes": "initial UI shell before real note data",
+      "risk_if_misread_as_real": "User may mistake rendered sample notes for live state.",
+      "owning_work_item": "TASK-BETA-001",
+      "replacement_acceptance_criteria": ["AC-BETA-001"],
+      "verification_surface": "VERIFY-BETA-001",
+      "state": "real",
+      "evidence_path": ".ai-state/test-history/TASK-BETA-001-test-output.txt",
+      "signoff_id": "SIGNOFF-BETA-001"
+    }
+  ]
+}

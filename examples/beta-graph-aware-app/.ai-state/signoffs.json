@@ -1,0 +1,15 @@
+{
+  "schema_version": "0.2",
+  "signoffs": [
+    {
+      "signoff_id": "SIGNOFF-BETA-001",
+      "feature_id": "FEATURE-BETA-001",
+      "work_item_id": "TASK-BETA-001",
+      "verification_surface_id": "VERIFY-BETA-001",
+      "owner_status": "accepted",
+      "signed_by": "example-owner",
+      "owner_note": "Fixture demonstrates signoff integrity without app-specific domain assumptions.",
+      "signed_at": "2026-06-13T12:00:00Z"
+    }
+  ]
+}

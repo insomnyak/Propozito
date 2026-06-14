@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.2",
+  "entries": [
+    {
+      "feature_id": "FEATURE-BETA-001",
+      "work_item_id": "TASK-BETA-001",
+      "status": "accepted",
+      "owner_rejection_note": "Initial fixture lacked a signoff record.",
+      "failure_type": "missing_signoff",
+      "root_cause": "Verification surface was created before signoff schema existed.",
+      "scope_misread": "none",
+      "tests_that_failed_to_catch_it": ["manual review only"],
+      "new_tests_added": ["node scripts/validate-signoffs.js examples/beta-graph-aware-app"],
+      "rework_plan": "Add signoffs.json and connect it to verification surface.",
+      "rework_status": "accepted",
+      "accepted_at": "2026-06-13T12:00:00Z",
+      "lessons_for_framework": ["Signoff integrity needs machine-readable linkage."]
+    }
+  ]
+}

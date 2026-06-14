@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.2",
+  "project_id": "beta-graph-aware-app",
+  "project_name": "Beta Graph-Aware Notes Example",
+  "current_phase": "beta-example",
+  "status": "release_ready",
+  "current_branch": "example/beta-graph-aware",
+  "current_commit": "no-git-example-beta",
+  "last_checkpoint": "2026-06-13T12:00:00Z",
+  "active_tasks": [],
+  "blocked_tasks": [],
+  "completed_tasks": ["TASK-BETA-001"],
+  "open_questions": [],
+  "high_risk_decisions_pending": [],
+  "active_locks": [],
+  "file_ownership": {
+    "src/client/notes-ui.js": "TASK-BETA-001",
+    "src/server/notes-service.js": "TASK-BETA-001",
+    "tests/notes.test.js": "TASK-BETA-001"
+  },
+  "branch_map": {
+    "TASK-BETA-001": "example/beta-graph-aware"
+  },
+  "worktree_map": {},
+  "required_gates": ["impact-awareness", "placeholder-burndown", "signoff-integrity", "state-lifecycle", "frontend-backend-boundary", "no-orphan-capability"],
+  "latest_gate_results": {
+    "impact-awareness": ".ai-state/gate-results/TASK-BETA-001-impact-awareness.json"
+  },
+  "test_commands": ["node tests/notes.test.js"],
+  "latest_test_status": "pass",
+  "persona_matrix_path": ".ai-state/persona-matrix.md",
+  "decision_log_path": ".ai-state/decision-log.md",
+  "assumption_log_path": ".ai-state/assumptions.md",
+  "risk_register_path": ".ai-state/risk-register.md",
+  "rollback_points": [
+    {
+      "id": "ROLLBACK-BETA-001",
+      "reason": "Before beta notes example",
+      "commit": "no-git-example-beta"
+    }
+  ],
+  "next_recommended_action": "Use this fixture to validate beta graph-aware framework artifacts."
+}

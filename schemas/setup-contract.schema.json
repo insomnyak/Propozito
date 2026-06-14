@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Setup Contract",
+  "type": "object",
+  "required": ["schema_version", "project_type", "surfaces", "verification_mode", "terminology_profile_path", "user_interaction_profile", "autonomy_profile", "context_rotation_policy", "evidence_storage_policy", "commit_push_policy", "project_management_integration", "semantic_graph_preference", "owner_signoff_policy", "security_boundary_profile"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "project_type": { "type": "string" },
+    "surfaces": {
+      "type": "object",
+      "required": ["has_frontend", "needs_frontend", "has_backend", "has_cli", "has_api", "has_external_integrations"],
+      "properties": {
+        "has_frontend": { "type": "boolean" },
+        "needs_frontend": { "type": "boolean" },
+        "has_backend": { "type": "boolean" },
+        "has_cli": { "type": "boolean" },
+        "has_api": { "type": "boolean" },
+        "has_external_integrations": { "type": "boolean" }
+      }
+    },
+    "verification_mode": { "type": "string" },
+    "terminology_profile_path": { "type": "string" },
+    "user_interaction_profile": { "$ref": "user-interaction-profile.schema.json" },
+    "autonomy_profile": { "$ref": "autonomy-profile.schema.json" },
+    "context_rotation_policy": { "$ref": "context-rotation-policy.schema.json" },
+    "evidence_storage_policy": { "type": "string" },
+    "commit_push_policy": { "type": "string" },
+    "project_management_integration": { "type": "string" },
+    "semantic_graph_preference": { "type": "string", "enum": ["disabled", "metadata_only", "external_index", "inline_embeddings"] },
+    "owner_signoff_policy": { "type": "string" },
+    "security_boundary_profile": { "type": "string" }
+  }
+}

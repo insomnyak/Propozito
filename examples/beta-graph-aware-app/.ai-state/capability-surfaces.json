@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.2",
+  "capabilities": [
+    {
+      "capability_id": "CAPABILITY-BETA-001",
+      "work_item_id": "TASK-BETA-001",
+      "surface_type": "frontend_surface",
+      "surface_path_or_description": "src/client/notes-ui.js renders note list output.",
+      "exemption_reason": ""
+    }
+  ]
+}

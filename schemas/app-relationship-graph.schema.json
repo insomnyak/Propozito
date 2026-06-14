@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Application Relationship Graph",
+  "type": "object",
+  "required": ["schema_version", "nodes", "edges"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["node_id", "node_type", "label", "source_path"],
+        "properties": {
+          "node_id": { "type": "string" },
+          "node_type": { "type": "string" },
+          "label": { "type": "string" },
+          "source_path": { "type": "string" },
+          "status": { "type": "string" }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["edge_id", "from", "to", "relationship", "impact"],
+        "properties": {
+          "edge_id": { "type": "string" },
+          "from": { "type": "string" },
+          "to": { "type": "string" },
+          "relationship": { "type": "string" },
+          "impact": { "type": "string", "enum": ["direct", "indirect", "planned"] },
+          "rationale": { "type": "string" }
+        }
+      }
+    }
+  }
+}

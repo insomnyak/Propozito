@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Context Rotation Policy",
+  "type": "object",
+  "required": ["mode", "rotation_triggers", "max_tasks_before_rotation", "required_bootstrap_paths"],
+  "properties": {
+    "mode": { "type": "string", "enum": ["manual_only", "after_each_verified_unit", "after_n_tasks", "after_token_threshold", "after_high_risk_task", "after_rework_or_rejection", "before_architecture_change", "before_release_gate"] },
+    "rotation_triggers": { "type": "array", "items": { "type": "string" } },
+    "max_tasks_before_rotation": { "type": "integer" },
+    "required_bootstrap_paths": { "type": "array", "items": { "type": "string" } }
+  }
+}

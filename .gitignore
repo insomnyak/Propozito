@@ -5,3 +5,8 @@ npm-debug.log*
 .env
 .env.*
 !.env.example
+.runtime/
+.artifacts/
+*.trace.zip
+playwright-report/
+test-results/

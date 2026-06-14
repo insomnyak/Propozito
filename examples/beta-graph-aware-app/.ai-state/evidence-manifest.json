@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.2",
+  "policy_id": "beta-example-evidence-policy",
+  "committed_metadata": ["command metadata", "exit codes", "artifact hashes", "summaries", "signoff records"],
+  "uncommitted_artifact_types": ["screenshot", "video", "trace", "zip", "pdf", "large_log", "generated_report"],
+  "artifacts": [
+    {
+      "artifact_id": "ARTIFACT-BETA-001",
+      "artifact_type": "raw_output",
+      "path": ".ai-state/test-history/TASK-BETA-001-test-output.txt",
+      "content_hash": "sha256-notes-beta-output",
+      "storage_location": "committed_metadata_fixture",
+      "committed": true
+    },
+    {
+      "artifact_id": "ARTIFACT-BETA-002",
+      "artifact_type": "screenshot",
+      "path": ".artifacts/screenshots/notes-beta.png",
+      "content_hash": "sha256-external-screenshot-placeholder",
+      "storage_location": "external_or_local_artifact_store",
+      "committed": false
+    }
+  ]
+}

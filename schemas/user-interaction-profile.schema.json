@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "User Interaction Profile",
+  "type": "object",
+  "required": ["role", "technical_level", "communication_style", "detail_level", "preferred_update_style"],
+  "properties": {
+    "role": { "type": "string" },
+    "technical_level": { "type": "string" },
+    "communication_style": { "type": "string" },
+    "detail_level": { "type": "string", "enum": ["brief", "standard", "detailed"] },
+    "preferred_update_style": { "type": "string" }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.2",
+  "project_type": "generic_notes_app",
+  "surfaces": {
+    "has_frontend": true,
+    "needs_frontend": true,
+    "has_backend": true,
+    "has_cli": false,
+    "has_api": true,
+    "has_external_integrations": false
+  },
+  "verification_mode": "hybrid_verification",
+  "terminology_profile_path": ".ai-state/terminology-profile.json",
+  "user_interaction_profile": {
+    "role": "experienced engineer",
+    "technical_level": "high",
+    "communication_style": "direct",
+    "detail_level": "standard",
+    "preferred_update_style": "concise status with evidence links"
+  },
+  "autonomy_profile": {
+    "mode": "pause_only_for_high_risk",
+    "pause_triggers": ["security_boundary_change", "failed_gate", "owner_rejection"],
+    "review_bundle_required": true
+  },
+  "context_rotation_policy": {
+    "mode": "after_each_verified_unit",
+    "rotation_triggers": ["after_each_verified_unit", "after_rework_or_rejection"],
+    "max_tasks_before_rotation": 1,
+    "required_bootstrap_paths": [".ai-state/project-state.json", ".ai-state/context-pack.json", ".ai-state/app-relationship-graph.json"]
+  },
+  "evidence_storage_policy": "manifest_metadata_committed_heavy_artifacts_external",
+  "commit_push_policy": "commit_after_verified_unit_push_on_owner_request",
+  "project_management_integration": "none",
+  "semantic_graph_preference": "metadata_only",
+  "owner_signoff_policy": "required_for_user_visible_features",
+  "security_boundary_profile": "browser_to_controller_to_backend"
+}

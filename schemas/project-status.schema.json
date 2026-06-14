@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Project Status",
+  "type": "object",
+  "required": ["schema_version", "project_id", "project_goal", "updated_at", "source_state_path", "current_branch", "current_commit", "overall_progress", "active_work", "blocked_work", "open_questions", "latest_gates", "latest_evidence", "latest_tests", "verification_status", "owner_signoffs", "placeholder_burndown", "relationship_graph_health", "next_recommended_action"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "project_id": { "type": "string" },
+    "project_goal": { "type": "string" },
+    "updated_at": { "type": "string" },
+    "source_state_path": { "type": "string" },
+    "current_branch": { "type": "string" },
+    "current_commit": { "type": "string" },
+    "overall_progress": { "type": "object" },
+    "active_work": { "type": "array", "items": { "type": "string" } },
+    "blocked_work": { "type": "array", "items": { "type": "string" } },
+    "bugs": { "type": "array", "items": { "type": "string" } },
+    "enhancements": { "type": "array", "items": { "type": "string" } },
+    "open_questions": { "type": "array", "items": { "type": "string" } },
+    "human_escalations": { "type": "array", "items": { "type": "string" } },
+    "current_agents": { "type": "array", "items": { "type": "string" } },
+    "latest_gates": { "type": "array", "items": { "type": "string" } },
+    "latest_evidence": { "type": "array", "items": { "type": "string" } },
+    "latest_tests": { "type": "array", "items": { "type": "string" } },
+    "verification_status": { "type": "string" },
+    "owner_signoffs": { "type": "array", "items": { "type": "string" } },
+    "placeholder_burndown": { "type": "object" },
+    "relationship_graph_health": { "type": "string" },
+    "next_recommended_action": { "type": "string" }
+  }
+}

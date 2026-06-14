@@ -1,0 +1,8 @@
+{
+  "pre_prompt_id": "PRE-BETA-001",
+  "submitted_at": "2026-06-13T12:00:00Z",
+  "submitted_by": "example-owner",
+  "raw_request": "Add a tiny notes capability that demonstrates beta graph-aware validation.",
+  "request_type": "new_feature",
+  "target_ai_coder": "codex"
+}

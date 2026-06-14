@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.2",
+  "placeholders": [
+    {
+      "placeholder_id": "PLACEHOLDER-001",
+      "feature_id": "FEATURE-001",
+      "surface": "Example screen or API",
+      "component_or_module": "example-module",
+      "what_it_fakes": "Example placeholder behavior",
+      "risk_if_misread_as_real": "User may mistake a demo value for completed behavior.",
+      "owning_work_item": "TASK-001",
+      "replacement_acceptance_criteria": ["AC-001"],
+      "verification_surface": "VERIFY-001",
+      "state": "planned",
+      "evidence_path": "",
+      "signoff_id": ""
+    }
+  ]
+}

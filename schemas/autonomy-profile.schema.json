@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Autonomy Profile",
+  "type": "object",
+  "required": ["mode", "pause_triggers", "review_bundle_required"],
+  "properties": {
+    "mode": { "type": "string", "enum": ["stop_after_every_unit", "continue_non_blocking_then_pause", "pause_only_for_high_risk", "pause_only_for_failures", "autonomous_with_review_bundle", "manual_only"] },
+    "pause_triggers": { "type": "array", "items": { "type": "string" } },
+    "review_bundle_required": { "type": "boolean" }
+  }
+}

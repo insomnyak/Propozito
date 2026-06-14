@@ -1,0 +1,18 @@
+{
+  "schema_version": "0.2",
+  "entries": [
+    {
+      "prompt_id": "PROMPT-BETA-001",
+      "timestamp": "2026-06-13T12:00:00Z",
+      "source_pre_prompt_path": ".ai-state/pre-prompts/PRE-BETA-001.json",
+      "refined_prompt_path": ".ai-state/refined-prompts/PROMPT-BETA-001.json",
+      "target_ai_coder": "codex",
+      "context_paths": [".ai-state/context-pack.json", ".ai-state/app-relationship-graph.json"],
+      "expected_outputs": ["source files", "test file", "verification surface", "signoff"],
+      "commit_sha": "no-git-example-beta",
+      "status": "completed",
+      "outcome": "accepted",
+      "lessons_learned": ["Prompt refinement should include graph nodes and verification surface IDs."]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.2",
+  "surfaces": [
+    {
+      "feature_id": "FEATURE-BETA-001",
+      "test_id": "VERIFY-BETA-001",
+      "plain_language_description": "Create a note, render it for the user, and reject blank titles.",
+      "why_it_matters": "This proves the visible notes capability is backed by real logic and not a placeholder.",
+      "method": "hybrid_verification",
+      "inputs": ["Graph-aware beta example", "blank string"],
+      "command": "node tests/notes.test.js",
+      "last_exit_code": 0,
+      "raw_output_path": ".ai-state/test-history/TASK-BETA-001-test-output.txt",
+      "visual_proof_type": "text_output",
+      "visual_proof_path_or_route": ".ai-state/test-history/TASK-BETA-001-test-output.txt",
+      "limitations": ["Fixture does not include a running browser UI."],
+      "owner_status": "accepted",
+      "owner_note": "Accepted as a generic beta fixture.",
+      "signed_at": "2026-06-13T12:00:00Z"
+    }
+  ]
+}

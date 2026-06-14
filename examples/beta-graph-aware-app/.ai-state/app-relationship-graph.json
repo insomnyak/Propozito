@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.2",
+  "nodes": [
+    { "node_id": "FEATURE-BETA-001", "node_type": "feature", "label": "Create and render a note", "source_path": ".ai-state/project-status.json", "status": "done" },
+    { "node_id": "TASK-BETA-001", "node_type": "task", "label": "Implement notes create/list/render", "source_path": ".ai-state/task-ledger.json", "status": "done" },
+    { "node_id": "FILE-CLIENT-NOTES", "node_type": "file", "label": "Client notes renderer", "source_path": "src/client/notes-ui.js", "status": "real" },
+    { "node_id": "FILE-SERVER-NOTES", "node_type": "file", "label": "Server notes service", "source_path": "src/server/notes-service.js", "status": "real" },
+    { "node_id": "TEST-NOTES", "node_type": "test", "label": "Notes behavior test", "source_path": "tests/notes.test.js", "status": "passing" },
+    { "node_id": "VERIFY-BETA-001", "node_type": "evidence", "label": "Verification card", "source_path": ".ai-state/verification-surfaces.json", "status": "accepted" },
+    { "node_id": "PLACEHOLDER-BETA-001", "node_type": "placeholder", "label": "Notes placeholder replaced", "source_path": ".ai-state/placeholder-ledger.json", "status": "real" }
+  ],
+  "edges": [
+    { "edge_id": "EDGE-BETA-001", "from": "TASK-BETA-001", "to": "FEATURE-BETA-001", "relationship": "implements", "impact": "direct", "rationale": "Task completes the feature." },
+    { "edge_id": "EDGE-BETA-002", "from": "TASK-BETA-001", "to": "FILE-CLIENT-NOTES", "relationship": "writes_to", "impact": "direct", "rationale": "Task owns client renderer." },
+    { "edge_id": "EDGE-BETA-003", "from": "TASK-BETA-001", "to": "FILE-SERVER-NOTES", "relationship": "writes_to", "impact": "direct", "rationale": "Task owns server note store." },
+    { "edge_id": "EDGE-BETA-004", "from": "TEST-NOTES", "to": "TASK-BETA-001", "relationship": "verifies", "impact": "direct", "rationale": "Test verifies task behavior." },
+    { "edge_id": "EDGE-BETA-005", "from": "TASK-BETA-001", "to": "PLACEHOLDER-BETA-001", "relationship": "replaces_placeholder", "impact": "direct", "rationale": "Task burns down the placeholder." },
+    { "edge_id": "EDGE-BETA-006", "from": "VERIFY-BETA-001", "to": "FEATURE-BETA-001", "relationship": "verifies", "impact": "direct", "rationale": "Verification surface proves feature behavior." }
+  ]
+}

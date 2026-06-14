@@ -1,0 +1,17 @@
+{
+  "schema_version": "0.2",
+  "state_items": [
+    {
+      "state_id": "STATE-BETA-001",
+      "work_item_id": "TASK-BETA-001",
+      "what_state_exists": "In-memory notes list for fixture demonstration.",
+      "storage_location": "process memory",
+      "owner": "SUBSYSTEM-NOTES",
+      "survives_restart": false,
+      "migration_plan": "No migration required for in-memory fixture.",
+      "rollback_plan": "Remove fixture source files.",
+      "test_plan": "node tests/notes.test.js",
+      "user_verification": "Verification surface VERIFY-BETA-001 explains behavior and limitations."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Refined Prompt",
+  "type": "object",
+  "required": ["prompt_id", "source_pre_prompt_id", "objective", "non_goals", "requirements", "acceptance_criteria", "affected_graph_nodes", "file_boundaries", "test_plan", "verification_plan", "evidence_plan", "required_gates", "state_updates", "commit_push_policy", "rollback_plan", "human_escalation_triggers", "completion_report_requirements"],
+  "properties": {
+    "prompt_id": { "type": "string" },
+    "source_pre_prompt_id": { "type": "string" },
+    "objective": { "type": "string" },
+    "non_goals": { "type": "array", "items": { "type": "string" } },
+    "requirements": { "type": "array", "items": { "type": "string" } },
+    "acceptance_criteria": { "type": "array", "items": { "type": "string" } },
+    "affected_graph_nodes": { "type": "array", "items": { "type": "string" } },
+    "file_boundaries": { "type": "object" },
+    "test_plan": { "type": "array", "items": { "type": "string" } },
+    "verification_plan": { "type": "array", "items": { "type": "string" } },
+    "evidence_plan": { "type": "array", "items": { "type": "string" } },
+    "required_gates": { "type": "array", "items": { "type": "string" } },
+    "state_updates": { "type": "array", "items": { "type": "string" } },
+    "commit_push_policy": { "type": "string" },
+    "rollback_plan": { "type": "string" },
+    "human_escalation_triggers": { "type": "array", "items": { "type": "string" } },
+    "completion_report_requirements": { "type": "array", "items": { "type": "string" } }
+  }
+}

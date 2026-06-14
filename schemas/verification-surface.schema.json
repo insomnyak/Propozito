@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Verification Surface",
+  "type": "object",
+  "required": ["schema_version", "surfaces"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "surfaces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["feature_id", "test_id", "plain_language_description", "why_it_matters", "method", "inputs", "command", "last_exit_code", "raw_output_path", "visual_proof_type", "limitations", "owner_status"],
+        "properties": {
+          "feature_id": { "type": "string" },
+          "test_id": { "type": "string" },
+          "plain_language_description": { "type": "string" },
+          "why_it_matters": { "type": "string" },
+          "method": { "type": "string" },
+          "inputs": { "type": "array", "items": { "type": "string" } },
+          "command": { "type": "string" },
+          "last_exit_code": { "type": "integer" },
+          "raw_output_path": { "type": "string" },
+          "visual_proof_type": { "type": "string" },
+          "visual_proof_path_or_route": { "type": "string" },
+          "limitations": { "type": "array", "items": { "type": "string" } },
+          "owner_status": { "type": "string", "enum": ["pending", "accepted", "rejected", "deferred", "not_required"] },
+          "owner_note": { "type": "string" },
+          "signed_at": { "type": "string" }
+        }
+      }
+    }
+  }
+}

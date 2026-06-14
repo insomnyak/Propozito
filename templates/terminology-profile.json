@@ -1,0 +1,15 @@
+{
+  "schema_version": "0.2",
+  "profile_id": "simple",
+  "preset": "simple",
+  "labels": {
+    "project": "Project",
+    "phase": "Phase",
+    "feature": "Feature",
+    "story": "Story",
+    "task": "Task",
+    "subtask": "Checklist Item",
+    "burst": "Burst",
+    "gate": "Gate"
+  }
+}

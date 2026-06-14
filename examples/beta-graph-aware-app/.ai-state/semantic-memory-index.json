@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.2",
+  "index_id": "beta-example-semantic-index",
+  "canonical_sources": [".ai-state/app-relationship-graph.json", ".ai-state/implementation-map.json"],
+  "nodes": [
+    {
+      "node_id": "SEM-BETA-001",
+      "source_artifact": "relationship_graph",
+      "source_path": ".ai-state/app-relationship-graph.json",
+      "source_kind": "graph_node",
+      "canonical_graph_node_id": "FEATURE-BETA-001",
+      "text_for_embedding": "Create and render a note feature verified by notes test and signoff.",
+      "embedding_provider": "omitted",
+      "embedding_model": "none",
+      "embedding_dimensions": 0,
+      "embedding_vector_ref": "",
+      "content_hash": "sha256-beta-feature-summary",
+      "last_indexed_at": "2026-06-13T12:00:00Z"
+    }
+  ]
+}

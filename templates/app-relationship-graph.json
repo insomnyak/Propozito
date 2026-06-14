@@ -1,0 +1,13 @@
+{
+  "schema_version": "0.2",
+  "nodes": [
+    {
+      "node_id": "FEATURE-001",
+      "node_type": "feature",
+      "label": "Example feature",
+      "source_path": ".ai-state/task-ledger.json",
+      "status": "planned"
+    }
+  ],
+  "edges": []
+}

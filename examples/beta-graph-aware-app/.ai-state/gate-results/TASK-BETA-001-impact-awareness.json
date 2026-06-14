@@ -1,0 +1,11 @@
+{
+  "gate_id": "impact-awareness",
+  "task_id": "TASK-BETA-001",
+  "agent": "traceability-manager",
+  "timestamp": "2026-06-13T12:00:00Z",
+  "status": "pass",
+  "inputs_checked": [".ai-state/app-relationship-graph.json", ".ai-state/implementation-map.json", ".ai-state/placeholder-ledger.json"],
+  "commands_run": ["node scripts/impact-check.js examples/beta-graph-aware-app --work-item TASK-BETA-001"],
+  "findings": ["Direct file, test, feature, placeholder, and verification impacts are represented in the relationship graph."],
+  "routing_decision": "proceed_to_verification"
+}

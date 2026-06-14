@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.2",
+  "project_id": "beta-graph-aware-app",
+  "project_goal": "Demonstrate v0.2 beta graph-aware Propozito artifacts with a small notes capability.",
+  "updated_at": "2026-06-13T12:00:00Z",
+  "source_state_path": ".ai-state/project-state.json",
+  "current_branch": "example/beta-graph-aware",
+  "current_commit": "no-git-example-beta",
+  "overall_progress": {
+    "completed": 1,
+    "total": 1,
+    "percent": 100
+  },
+  "active_work": [],
+  "blocked_work": [],
+  "bugs": [],
+  "enhancements": [],
+  "open_questions": [],
+  "human_escalations": [],
+  "current_agents": ["propozito-orchestrator", "traceability-manager", "evidence-verifier"],
+  "latest_gates": ["impact-awareness", "placeholder-burndown", "signoff-integrity"],
+  "latest_evidence": [".ai-state/test-history/TASK-BETA-001-test-output.txt"],
+  "latest_tests": ["node tests/notes.test.js"],
+  "verification_status": "accepted",
+  "owner_signoffs": ["SIGNOFF-BETA-001"],
+  "placeholder_burndown": {
+    "live": 0,
+    "real": 1,
+    "deferred": 0
+  },
+  "relationship_graph_health": "valid",
+  "next_recommended_action": "Use this beta example as a model for new project setup."
+}

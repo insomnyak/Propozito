@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Capability Surface",
+  "type": "object",
+  "required": ["schema_version", "capabilities"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["capability_id", "work_item_id", "surface_type"],
+        "properties": {
+          "capability_id": { "type": "string" },
+          "work_item_id": { "type": "string" },
+          "surface_type": { "type": "string", "enum": ["frontend_surface", "api_consumer", "cli_surface", "scheduled_job_observability", "internal_library_with_tests", "external_consumer_contract", "explicit_exemption"] },
+          "surface_path_or_description": { "type": "string" },
+          "exemption_reason": { "type": "string" }
+        }
+      }
+    }
+  }
+}

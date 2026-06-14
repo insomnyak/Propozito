@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.2",
+  "policy_id": "default-evidence-policy",
+  "committed_metadata": ["command metadata", "exit codes", "artifact hashes", "summaries"],
+  "uncommitted_artifact_types": ["screenshot", "video", "trace", "zip", "pdf", "large_log"],
+  "artifacts": [
+    {
+      "artifact_id": "ARTIFACT-001",
+      "artifact_type": "raw_output",
+      "path": ".ai-state/test-history/output.txt",
+      "content_hash": "sha256-example",
+      "storage_location": "committed_metadata",
+      "committed": true
+    }
+  ]
+}

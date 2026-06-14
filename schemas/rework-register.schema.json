@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Rework Register",
+  "type": "object",
+  "required": ["schema_version", "entries"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["feature_id", "work_item_id", "status", "failure_type", "root_cause", "scope_misread", "tests_that_failed_to_catch_it", "new_tests_added", "rework_plan", "rework_status", "lessons_for_framework"],
+        "properties": {
+          "feature_id": { "type": "string" },
+          "work_item_id": { "type": "string" },
+          "status": { "type": "string" },
+          "owner_rejection_note": { "type": "string" },
+          "failure_type": { "type": "string" },
+          "root_cause": { "type": "string" },
+          "scope_misread": { "type": "string" },
+          "tests_that_failed_to_catch_it": { "type": "array", "items": { "type": "string" } },
+          "new_tests_added": { "type": "array", "items": { "type": "string" } },
+          "rework_plan": { "type": "string" },
+          "rework_status": { "type": "string" },
+          "accepted_at": { "type": "string" },
+          "lessons_for_framework": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

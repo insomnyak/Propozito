@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Verification Mode",
+  "type": "object",
+  "required": ["mode", "required_surfaces", "owner_visible"],
+  "properties": {
+    "mode": { "type": "string", "enum": ["frontend_verification", "cli_verification", "api_verification", "backend_verification", "hybrid_verification", "headless_ci_verification", "manual_human_review"] },
+    "required_surfaces": { "type": "array", "items": { "type": "string" } },
+    "owner_visible": { "type": "boolean" }
+  }
+}
